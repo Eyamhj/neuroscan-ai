@@ -1,7 +1,7 @@
 import tensorflow as tf
 from tensorflow.keras import layers, models
 
-# تحميل dataset
+
 IMG_SIZE = (128, 128)
 BATCH_SIZE = 32
 
