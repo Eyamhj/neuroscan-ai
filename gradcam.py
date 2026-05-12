@@ -12,8 +12,6 @@ from tensorflow.keras.utils import load_img, img_to_array
 loaded_model = tf.keras.models.load_model("tumor_model.h5", compile=False)
 
 # -----------------------------
-# 2) Rebuild a fresh functional model and copy weights
-#    هذا يحل مشاكل Keras 3 مع model.output / gradients
 # -----------------------------
 model = tf.keras.models.clone_model(loaded_model)
 model(tf.zeros((1, 128, 128, 3)))  # build model
